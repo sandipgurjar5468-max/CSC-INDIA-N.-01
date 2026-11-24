@@ -1,0 +1,13 @@
+BALAJI SERVICES - RAZORPAY TEST DEPLOY
+
+यह ZIP सिर्फ Razorpay TEST Mode के लिए है। इसमें Live payment बंद है।
+
+महत्वपूर्ण: HTML में Key Secret न डालें। Netlify Dashboard > Site configuration > Environment variables में ये दो variables बनाएँ:
+1) RAZORPAY_KEY_ID = आपकी Razorpay TEST Key ID (rzp_test_ से शुरू)
+2) RAZORPAY_KEY_SECRET = उसी TEST Key का Secret
+
+फिर Netlify पर नया deploy करें ताकि Functions भी deploy हों। सिर्फ index.html को drag-drop करने से Netlify Functions deploy नहीं होंगे। Git-based deploy या Netlify CLI का उपयोग करें; deploy के बाद Functions सूची में create-order और verify-payment दिखने चाहिए।
+
+टेस्ट शुल्क: Team Leader ₹300 और Retailer ₹600; FSE ₹0। Test Mode में असली पैसा नहीं कटना चाहिए। भुगतान सफल होने और server signature verification के बाद ही इस browser में Demo Account बनेगा।
+
+यह अभी production account system नहीं है: Demo login local browser storage पर है। इसे असली ग्राहक/नौकरी पंजीकरण के लिए इस्तेमाल न करें। Aadhaar/PAN/selfie अपलोड नहीं माँगे जाते।
